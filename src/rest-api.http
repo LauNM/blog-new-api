@@ -1,0 +1,14 @@
+GET http://localhost:3000/posts/9
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "heyyyy",
+  "summary": "lldsfksdkfj s",
+  "content": "dfjdks jlkf jskfj sdkfjdslkjf dsk ",
+  "themes": [
+    {
+      "id": 1
+    }
+  ]
+}

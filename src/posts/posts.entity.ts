@@ -3,7 +3,10 @@ import {
   Column,
   PrimaryGeneratedColumn,
   CreateDateColumn,
+  ManyToMany,
+  JoinTable,
 } from 'typeorm';
+import { Themes } from '../themes/themes.entity';
 
 @Entity()
 export class Posts {
@@ -17,4 +20,7 @@ export class Posts {
   content: string;
   @CreateDateColumn()
   createdAt: Date;
+  @ManyToMany(() => Themes)
+  @JoinTable()
+  themes: Themes[];
 }
