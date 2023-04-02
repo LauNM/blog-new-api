@@ -3,7 +3,9 @@ import {
   Column,
   PrimaryGeneratedColumn,
   CreateDateColumn,
+  ManyToMany,
 } from 'typeorm';
+import { PostEntity } from '../post/post.entity';
 
 @Entity()
 export class ThemeEntity {
@@ -13,4 +15,6 @@ export class ThemeEntity {
   title: string;
   @CreateDateColumn()
   createdAt: Date;
+  @ManyToMany(() => PostEntity, (post: PostEntity) => post.themes)
+  public posts: PostEntity[];
 }

@@ -1,4 +1,4 @@
-GET http://localhost:3000/post
+GET http://localhost:3000/post/1
 Accept: application/json
 Content-Type: application/json
 
@@ -12,6 +12,17 @@ Content-Type: application/json
 }
 
 ###
+PATCH http://localhost:3000/post/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "themes": [{
+    "id": 1
+  }]
+}
+
+###
 POST http://localhost:3000/post
 Accept: application/json
 Content-Type: application/json
@@ -22,7 +33,7 @@ Content-Type: application/json
   "content": "fdsf sdlkfj sdlkfj sdlkfjsdlkfjslkqsd kqsmkqzome ds",
   "themes": [
     {
-      "id": 2
+      "id": 1
     }
   ]
 }

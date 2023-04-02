@@ -5,6 +5,8 @@ import {
   CreateDateColumn,
   ManyToMany,
   JoinTable,
+  ManyToOne,
+  JoinColumn,
 } from 'typeorm';
 import { ThemeEntity } from '../theme/theme.entity';
 
@@ -20,7 +22,9 @@ export class PostEntity {
   content: string;
   @CreateDateColumn()
   createdAt: Date;
-  @ManyToMany(() => ThemeEntity)
+  @ManyToMany(() => ThemeEntity, (theme: ThemeEntity) => theme.posts, {
+    cascade: true,
+  })
   @JoinTable({
     name: 'post_themes',
     joinColumn: {
