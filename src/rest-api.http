@@ -1,14 +1,28 @@
-GET http://localhost:3000/posts/9
+GET http://localhost:3000/post
+Accept: application/json
+Content-Type: application/json
+
+###
+POST http://localhost:3000/theme
 Accept: application/json
 Content-Type: application/json
 
 {
-  "title": "heyyyy",
-  "summary": "lldsfksdkfj s",
-  "content": "dfjdks jlkf jskfj sdkfjdslkjf dsk ",
+  "title": "Thème 1"
+}
+
+###
+POST http://localhost:3000/post
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Coucou toi",
+  "summary": "bla bla bla",
+  "content": "fdsf sdlkfj sdlkfj sdlkfjsdlkfjslkqsd kqsmkqzome ds",
   "themes": [
     {
-      "id": 1
+      "id": 2
     }
   ]
 }
