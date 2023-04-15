@@ -1,3 +1,373 @@
+GET http://localhost:3000/post?theme=7
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-15T135834.200.json
+
+###
+
+GET http://localhost:3000/post?theme=5
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-15T135824.200.json
+
+###
+
+GET http://localhost:3000/post?theme=5
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-15T135822.200.json
+
+###
+
+GET http://localhost:3000/post?theme=7
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-15T135815.200.json
+
+###
+
+GET http://localhost:3000/post?theme=1
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-15T135802.200.json
+
+###
+
+GET http://localhost:3000/post
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-15T135749.200.json
+
+###
+
+GET http://localhost:3000/theme
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-15T135735.200.json
+
+###
+
+GET http://localhost:3000/post
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-07T054546.200.json
+
+###
+
+PATCH http://localhost:3000/post/5
+Accept: application/json
+Content-Type: application/json
+Content-Length: 35
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "themes": [{
+    "id": 7
+  }]
+}
+
+<> 2023-04-07T054537.200.json
+
+###
+
+POST http://localhost:3000/post
+Accept: application/json
+Content-Type: application/json
+Content-Length: 220
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "encore un autre post",
+  "summary": "encore un texte pour résumer ce faux article",
+  "content": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+  "themes": [7]
+}
+
+<> 2023-04-07T054339.500.json
+
+###
+
+PATCH http://localhost:3000/post/5
+Accept: application/json
+Content-Type: application/json
+Content-Length: 19
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "themes": [7]
+}
+
+<> 2023-04-07T054308.500.json
+
+###
+
+GET http://localhost:3000/post/5
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-07T054252.200.json
+
+###
+
+PATCH http://localhost:3000/post/5
+Accept: application/json
+Content-Type: application/json
+Content-Length: 19
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "themes": [7]
+}
+
+<> 2023-04-07T054119.500.json
+
+###
+
+GET http://localhost:3000/theme
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-07T054110.200.json
+
+###
+
+GET http://localhost:3000/theme
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-07T054108.200.json
+
+###
+
+PATCH http://localhost:3000/post/5
+Accept: application/json
+Content-Type: application/json
+Content-Length: 19
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "themes": [4]
+}
+
+<> 2023-04-07T054102.500.json
+
+###
+
+PATCH http://localhost:3000/post/5
+Accept: application/json
+Content-Type: application/json
+Content-Length: 17
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "themes": 4
+}
+
+<> 2023-04-07T054050.200.json
+
+###
+
+POST http://localhost:3000/post
+Accept: application/json
+Content-Type: application/json
+Content-Length: 203
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "post 2",
+  "summary": "encore un texte pour résumer ce faux article",
+  "content": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+  "theme": 4
+}
+
+<> 2023-04-07T054016.201.json
+
+###
+
+GET http://localhost:3000/theme
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-07T052106.200.json
+
+###
+
+POST http://localhost:3000/theme
+Accept: application/json
+Content-Type: application/json
+Content-Length: 25
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Thème 2"
+}
+
+<> 2023-04-07T052059.201.json
+
+###
+
+POST http://localhost:3000/theme
+Accept: application/json
+Content-Type: application/json
+Content-Length: 25
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Thème 1"
+}
+
+<> 2023-04-07T052045.500.json
+
+###
+
+GET http://localhost:3000/theme
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-07T051753.200.json
+
+###
+
+POST http://localhost:3000/theme
+Accept: application/json
+Content-Type: application/json
+Content-Length: 25
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Thème 2"
+}
+
+<> 2023-04-07T051733.201.json
+
+###
+
+PATCH http://localhost:3000/theme/4
+Accept: application/json
+Content-Type: application/json
+Content-Length: 25
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Thème 3"
+}
+
+<> 2023-04-07T051725.200.json
+
+###
+
+GET http://localhost:3000/theme
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-07T050354.200.json
+
+###
+
+POST http://localhost:3000/theme
+Accept: application/json
+Content-Type: application/json
+Content-Length: 25
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Thème 2"
+}
+
+<> 2023-04-07T050340.201.json
+
+###
+
+POST http://localhost:3000/theme
+Accept: application/json
+Content-Type: application/json
+Content-Length: 25
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Thème 2"
+}
+
+<> 2023-04-07T050326.201.json
+
+###
+
 GET http://localhost:3000/post/1
 Accept: application/json
 Content-Type: application/json
@@ -401,493 +771,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2023-04-02T131737.200.json
-
-###
-
-GET http://localhost:3000/posts
-Accept: application/json
-Content-Type: application/json
-Content-Length: 183
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "test",
-  "summary": "kdsfksdf sdf sdf sfs",
-  "content": "sf kjfskfjsj sdlkfj sfjsdfjsdlf jsdf",
-  "themes": [
-    {
-      "id": 1
-    },
-    {
-      "id": 2
-    }
-  ]
-}
-
-<> 2023-04-02T131640.200.json
-
-###
-
-POST http://localhost:3000/posts
-Accept: application/json
-Content-Type: application/json
-Content-Length: 183
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "test",
-  "summary": "kdsfksdf sdf sdf sfs",
-  "content": "sf kjfskfjsj sdlkfj sfjsdfjsdlf jsdf",
-  "themes": [
-    {
-      "id": 1
-    },
-    {
-      "id": 2
-    }
-  ]
-}
-
-<> 2023-04-02T130457.201.json
-
-###
-
-POST http://localhost:3000/themes
-Accept: application/json
-Content-Type: application/json
-Content-Length: 32
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "deuxième theme"
-}
-
-<> 2023-04-02T130235.201.json
-
-###
-
-POST http://localhost:3000/themes
-Accept: application/json
-Content-Type: application/json
-Content-Length: 32
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "deuxième theme"
-}
-
-<> 2023-04-02T130223.404.json
-
-###
-
-POST http://localhost:3000/themes
-Accept: application/json
-Content-Type: application/json
-Content-Length: 32
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "deuxième theme"
-}
-
-<> 2023-04-02T094043.404.json
-
-###
-
-POST http://localhost:3000/themes
-Accept: application/json
-Content-Type: application/json
-Content-Length: 32
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "deuxième theme"
-}
-
-<> 2023-04-02T094042.404.json
-
-###
-
-GET http://localhost:3000/themes
-Accept: application/json
-Content-Type: application/json
-Content-Length: 149
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "heyyyy",
-  "summary": "lldsfksdkfj s",
-  "content": "dfjdks jlkf jskfj sdkfjdslkjf dsk ",
-  "themes": [
-    {
-      "id": 1
-    }
-  ]
-}
-
-<> 2023-04-02T094017.200.json
-
-###
-
-GET http://localhost:3000/posts/9
-Accept: application/json
-Content-Type: application/json
-Content-Length: 149
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "heyyyy",
-  "summary": "lldsfksdkfj s",
-  "content": "dfjdks jlkf jskfj sdkfjdslkjf dsk ",
-  "themes": [
-    {
-      "id": 1
-    }
-  ]
-}
-
-<> 2023-04-01T203250.200.json
-
-###
-
-POST http://localhost:3000/posts
-Accept: application/json
-Content-Type: application/json
-Content-Length: 149
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "heyyyy",
-  "summary": "lldsfksdkfj s",
-  "content": "dfjdks jlkf jskfj sdkfjdslkjf dsk ",
-  "themes": [
-    {
-      "id": 1
-    }
-  ]
-}
-
-<> 2023-04-01T203051.201.json
-
-###
-
-POST http://localhost:3000/posts
-Accept: application/json
-Content-Type: application/json
-Content-Length: 119
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "heyyyy",
-  "summary": "lldsfksdkfj s",
-  "content": "dfjdks jlkf jskfj sdkfjdslkjf dsk ",
-  "themes": 1
-}
-
-<> 2023-04-01T202847.201.json
-
-###
-
-GET http://localhost:3000/posts
-Accept: application/json
-Content-Type: application/json
-Content-Length: 4
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-
-}
-
-<> 2023-04-01T202805.200.json
-
-###
-
-GET http://localhost:3000/posts
-Accept: application/json
-Content-Type: application/json
-Content-Length: 4
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-
-}
-
-<> 2023-04-01T202801.200.json
-
-###
-
-DELETE http://localhost:3000/posts/3
-Accept: application/json
-Content-Type: application/json
-Content-Length: 4
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-
-}
-
-<> 2023-04-01T202754.200.json
-
-###
-
-DELETE http://localhost:3000/posts/4
-Accept: application/json
-Content-Type: application/json
-Content-Length: 4
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-
-}
-
-<> 2023-04-01T202750.200.json
-
-###
-
-DELETE http://localhost:3000/posts/5
-Accept: application/json
-Content-Type: application/json
-Content-Length: 4
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-
-}
-
-<> 2023-04-01T202747.200.json
-
-###
-
-DELETE http://localhost:3000/posts/6
-Accept: application/json
-Content-Type: application/json
-Content-Length: 4
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-
-}
-
-<> 2023-04-01T202741.200.json
-
-###
-
-GET http://localhost:3000/posts
-Accept: application/json
-Content-Type: application/json
-Content-Length: 4
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-
-}
-
-<> 2023-04-01T202729.200.json
-
-###
-
-DELETE http://localhost:3000/posts/7
-Accept: application/json
-Content-Type: application/json
-Content-Length: 5
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-
-}
-
-<> 2023-04-01T202718.200.json
-
-###
-
-DELETE http://localhost:3000/posts
-Accept: application/json
-Content-Type: application/json
-Content-Length: 13
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "id": 7
-}
-
-<> 2023-04-01T202638.404.json
-
-###
-
-DELETE http://localhost:3000/posts
-Accept: application/json
-Content-Type: application/json
-Content-Length: 13
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "id": 7
-}
-
-<> 2023-04-01T202305.404.json
-
-###
-
-DELETE http://localhost:3000/posts/7
-Accept: application/json
-Content-Type: application/json
-Content-Length: 13
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "id": 7
-}
-
-<> 2023-04-01T202255.404.json
-
-###
-
-DELETE http://localhost:3000/posts/7
-Accept: application/json
-Content-Type: application/json
-Content-Length: 3
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-}
-
-<> 2023-04-01T202248.404.json
-
-###
-
-DELETE http://localhost:3000/posts
-Accept: application/json
-Content-Type: application/json
-Content-Length: 13
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "id": 7
-}
-
-<> 2023-04-01T202237.404.json
-
-###
-
-POST http://localhost:3000/posts
-Accept: application/json
-Content-Type: application/json
-Content-Length: 131
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "Test ici",
-  "summary": "Je teste ici si tout va bien",
-  "content": "Hello you, how are you today?",
-  "themes": 1
-}
-
-<> 2023-04-01T202214.201.json
-
-###
-
-POST http://localhost:3000/posts
-Accept: application/json
-Content-Type: application/json
-Content-Length: 133
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "Test ici",
-  "summary": "Je teste ici si tout va bien",
-  "content": "Hello you, how are you today?",
-  "themes": [1]
-}
-
-<> 2023-04-01T202148.201.json
-
-###
-
-POST http://localhost:3000/posts
-Accept: application/json
-Content-Type: application/json
-Content-Length: 131
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "Test ici",
-  "summary": "Je teste ici si tout va bien",
-  "content": "Hello you, how are you today?",
-  "themes": 1
-}
-
-<> 2023-04-01T202132.201.json
-
-###
-
-GET http://localhost:3000/posts
-Accept: application/json
-Content-Type: application/json
-Content-Length: 131
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "Test ici",
-  "summary": "Je teste ici si tout va bien",
-  "content": "Hello you, how are you today?",
-  "themes": 1
-}
-
-<> 2023-04-01T202121.200.json
 
 ###
 

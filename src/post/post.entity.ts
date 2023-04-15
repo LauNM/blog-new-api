@@ -14,7 +14,7 @@ import { ThemeEntity } from '../theme/theme.entity';
 export class PostEntity {
   @PrimaryGeneratedColumn()
   id: number;
-  @Column()
+  @Column({ unique: true })
   title: string;
   @Column()
   summary: string;

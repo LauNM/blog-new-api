@@ -1,26 +1,6 @@
-GET http://localhost:3000/post/1
+GET http://localhost:3000/post?theme=7
 Accept: application/json
 Content-Type: application/json
-
-###
-POST http://localhost:3000/theme
-Accept: application/json
-Content-Type: application/json
-
-{
-  "title": "Thème 1"
-}
-
-###
-PATCH http://localhost:3000/post/1
-Accept: application/json
-Content-Type: application/json
-
-{
-  "themes": [{
-    "id": 1
-  }]
-}
 
 ###
 POST http://localhost:3000/post
@@ -28,12 +8,30 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "title": "Coucou toi",
-  "summary": "bla bla bla",
-  "content": "fdsf sdlkfj sdlkfj sdlkfjsdlkfjslkqsd kqsmkqzome ds",
-  "themes": [
-    {
-      "id": 1
-    }
-  ]
+  "title": "encore un autre post",
+  "summary": "encore un texte pour résumer ce faux article",
+  "content": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+  "themes": [{
+    "id": 7
+  }]
+}
+
+###
+PATCH http://localhost:3000/post/5
+Accept: application/json
+Content-Type: application/json
+
+{
+  "themes": [{
+    "id": 7
+  }]
+}
+
+###
+POST http://localhost:3000/theme
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Thème 2"
 }

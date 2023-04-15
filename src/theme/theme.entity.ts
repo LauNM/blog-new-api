@@ -11,7 +11,7 @@ import { PostEntity } from '../post/post.entity';
 export class ThemeEntity {
   @PrimaryGeneratedColumn()
   id: number;
-  @Column()
+  @Column({ unique: true })
   title: string;
   @CreateDateColumn()
   createdAt: Date;

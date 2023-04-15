@@ -5,7 +5,7 @@ import {
   Body,
   Patch,
   Param,
-  Delete,
+  Delete, Query
 } from '@nestjs/common';
 import { PostService } from './post.service';
 import { PostEntity } from './post.entity';
@@ -20,8 +20,8 @@ export class PostController {
     return this.postService.create(createPostDto);
   }
   @Get()
-  findAll(): Promise<PostEntity[]> {
-    return this.postService.findAll();
+  findAll(@Query('theme') themeId: number) {
+    return this.postService.findAll(themeId);
   }
   @Get('/:id')
   findOne(@Param('id') id: number): Promise<PostEntity> {
