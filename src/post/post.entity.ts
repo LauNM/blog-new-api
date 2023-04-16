@@ -5,8 +5,6 @@ import {
   CreateDateColumn,
   ManyToMany,
   JoinTable,
-  ManyToOne,
-  JoinColumn,
 } from 'typeorm';
 import { ThemeEntity } from '../theme/theme.entity';
 
@@ -20,6 +18,8 @@ export class PostEntity {
   summary: string;
   @Column()
   content: string;
+  @Column()
+  author: string;
   @CreateDateColumn()
   createdAt: Date;
   @ManyToMany(() => ThemeEntity, (theme: ThemeEntity) => theme.posts, {

@@ -5,7 +5,8 @@ import {
   Body,
   Patch,
   Param,
-  Delete, Query
+  Delete,
+  Query,
 } from '@nestjs/common';
 import { PostService } from './post.service';
 import { PostEntity } from './post.entity';

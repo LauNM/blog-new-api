@@ -6,4 +6,6 @@ export class CreatePostDto {
   summary: string;
   @Length(10)
   content: string;
+  @Length(2)
+  author: string;
 }
