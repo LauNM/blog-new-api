@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { DeepPartial, Repository } from 'typeorm';
 import { PostEntity } from './post.entity';
 import { UpdatePostDto } from './dto/updatePostDto';
 import { CreatePostDto } from './dto/createPostDto';
@@ -17,19 +17,34 @@ export class PostService {
     return this.postRepository.save(post);
   }
 
-  async findAll(themeId?: number): Promise<PostEntity[]> {
-    const queryBuilder = this.postRepository.createQueryBuilder('post');
+  async findAll(themeId?: number): Promise<
+    {
+      id: number;
+      title: string;
+      content: string;
+      summary: string;
+      author: string;
+      createdAt: Date;
+      themes: number[];
+    }[]
+  > {
+    const queryBuilder = this.postRepository
+      .createQueryBuilder('post')
+      .leftJoinAndSelect('post.themes', 'themes');
 
     if (themeId) {
-      queryBuilder
-        .leftJoin('post.themes', 'theme')
-        .where('theme.id = :themeId', { themeId });
+      queryBuilder.where('theme.id = :themeId', { themeId });
     }
-
-    return await queryBuilder.getMany();
+    const posts = await queryBuilder.getMany();
+    return posts.map((post) => {
+      return {
+        ...post,
+        themes: post.themes.map((theme) => theme.id),
+      };
+    });
   }
 
-  async find(id: number) {
+  async findOne(id: number) {
     return await this.postRepository
       .createQueryBuilder('post')
       .leftJoinAndSelect('post.themes', 'theme')
@@ -37,8 +52,23 @@ export class PostService {
       .getOne();
   }
 
+  async find(id: number) {
+    const post = await this.postRepository
+      .createQueryBuilder('post')
+      .leftJoinAndSelect('post.themes', 'theme')
+      .where('post.id = :id', { id })
+      .getOne();
+
+    return {
+      ...post,
+      themes: post.themes.map((theme) => {
+        return theme.id;
+      }),
+    };
+  }
+  //find solution for update AND later : post
   async update(id: number, data: UpdatePostDto): Promise<PostEntity> {
-    let post = await this.find(id);
+    let post = await this.findOne(id);
     post = this.postRepository.merge(post, data);
     return this.postRepository.save(post);
   }

@@ -1,4 +1,4 @@
-DELETE http://localhost:3000/post/7
+GET http://localhost:3000/post
 Accept: application/json
 Content-Type: application/json
 
@@ -8,15 +8,11 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "title": "Premier article",
-  "summary": "un texte pour résumer ce faux article",
+  "title": "Quatrième article",
+  "summary": "Encore un autre texte pour résumer ce faux article",
   "content": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
   "author": "Laurie",
-  "themes": [
-    {
-      "id": 7
-    }
-  ]
+  "themes": [13, 14]
 }
 
 ###
@@ -36,5 +32,5 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "title": "Thème 2"
+  "title": "Thème 3"
 }

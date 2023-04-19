@@ -25,7 +25,7 @@ export class PostController {
     return this.postService.findAll(themeId);
   }
   @Get('/:id')
-  findOne(@Param('id') id: number): Promise<PostEntity> {
+  findOne(@Param('id') id: number) {
     return this.postService.find(id);
   }
   @Patch('/:id')
