@@ -16,8 +16,14 @@ export class ThemeService {
     const theme = this.themeRepository.create(createThemeDto);
     return this.themeRepository.save(theme);
   }
-  findAll(): Promise<ThemeEntity[]> {
-    return this.themeRepository.find();
+  findAll(searchQuery: string): Promise<ThemeEntity[]> {
+    const queryBuilder = this.themeRepository.createQueryBuilder('theme');
+    if (searchQuery) {
+      queryBuilder.where('theme.title ILIKE :search', {
+        search: `%${searchQuery}%`,
+      });
+    }
+    return queryBuilder.getMany();
   }
   find(id: number): Promise<ThemeEntity> {
     return this.themeRepository.findOneBy({ id: id });

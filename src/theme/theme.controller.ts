@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { ThemeService } from './theme.service';
 import { CreateThemeDto } from './dto/createThemeDto';
@@ -21,8 +22,8 @@ export class ThemeController {
   }
 
   @Get()
-  findAll(): Promise<ThemeEntity[]> {
-    return this.themeService.findAll();
+  findAll(@Query('search') searchQuery: string): Promise<ThemeEntity[]> {
+    return this.themeService.findAll(searchQuery);
   }
 
   @Get(':id')

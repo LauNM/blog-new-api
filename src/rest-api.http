@@ -1,4 +1,4 @@
-GET http://localhost:3000/post?theme=12
+GET http://localhost:3000/theme?search=12
 Accept: application/json
 Content-Type: application/json
 

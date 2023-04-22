@@ -9,7 +9,6 @@ import {
   Query,
 } from '@nestjs/common';
 import { PostService } from './post.service';
-import { PostEntity } from './post.entity';
 import { UpdatePostDto } from './dto/updatePostDto';
 import { CreatePostDto } from './dto/createPostDto';
 
