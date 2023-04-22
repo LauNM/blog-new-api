@@ -21,8 +21,11 @@ export class PostController {
     return this.postService.create(createPostDto);
   }
   @Get()
-  findAll(@Query('theme') themeId: number) {
-    return this.postService.findAll(themeId);
+  findAll(
+    @Query('theme') themeId: number,
+    @Query('search') searchQuery: string,
+  ) {
+    return this.postService.findAll(themeId, searchQuery);
   }
   @Get('/:id')
   findOne(@Param('id') id: number) {

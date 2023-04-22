@@ -1,4 +1,4 @@
-import { Injectable, Query } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { PostEntity } from './post.entity';
@@ -17,7 +17,10 @@ export class PostService {
     return this.postRepository.save(post);
   }
 
-  async findAll(@Query('theme') themeId: number): Promise<
+  async findAll(
+    themeId: number,
+    searchQuery: string,
+  ): Promise<
     {
       id: number;
       title: string;
@@ -34,6 +37,11 @@ export class PostService {
 
     if (themeId) {
       queryBuilder.where('themes.id = :themeId', { themeId });
+    }
+    if (searchQuery) {
+      queryBuilder.andWhere('post.title ILIKE :search', {
+        search: `%${searchQuery}%`,
+      });
     }
     const posts = await queryBuilder.getMany();
     return posts.map((post) => {
