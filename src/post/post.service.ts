@@ -1,6 +1,6 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Query } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { DeepPartial, Repository } from 'typeorm';
+import { Repository } from 'typeorm';
 import { PostEntity } from './post.entity';
 import { UpdatePostDto } from './dto/updatePostDto';
 import { CreatePostDto } from './dto/createPostDto';
@@ -17,7 +17,7 @@ export class PostService {
     return this.postRepository.save(post);
   }
 
-  async findAll(themeId?: number): Promise<
+  async findAll(@Query('theme') themeId: number): Promise<
     {
       id: number;
       title: string;
@@ -33,7 +33,7 @@ export class PostService {
       .leftJoinAndSelect('post.themes', 'themes');
 
     if (themeId) {
-      queryBuilder.where('theme.id = :themeId', { themeId });
+      queryBuilder.where('themes.id = :themeId', { themeId });
     }
     const posts = await queryBuilder.getMany();
     return posts.map((post) => {
