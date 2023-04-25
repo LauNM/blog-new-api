@@ -17,20 +17,7 @@ export class PostService {
     return this.postRepository.save(post);
   }
 
-  async findAll(
-    themeId: number,
-    searchQuery: string,
-  ): Promise<
-    {
-      id: number;
-      title: string;
-      content: string;
-      summary: string;
-      author: string;
-      createdAt: Date;
-      themes: number[];
-    }[]
-  > {
+  async findAll(themeId: number, searchQuery: string): Promise<PostEntity[]> {
     const queryBuilder = this.postRepository
       .createQueryBuilder('post')
       .leftJoinAndSelect('post.themes', 'themes');
@@ -43,16 +30,17 @@ export class PostService {
         search: `%${searchQuery}%`,
       });
     }
-    const posts = await queryBuilder.getMany();
+    return queryBuilder.getMany();
+    /*const posts = await queryBuilder.getMany();
     return posts.map((post) => {
       return {
         ...post,
         themes: post.themes.map((theme) => theme.id),
       };
-    });
+    });*/
   }
 
-  async findOne(id: number) {
+  async find(id: number) {
     return await this.postRepository
       .createQueryBuilder('post')
       .leftJoinAndSelect('post.themes', 'theme')
@@ -60,7 +48,7 @@ export class PostService {
       .getOne();
   }
 
-  async find(id: number) {
+  /* async find(id: number) {
     const post = await this.postRepository
       .createQueryBuilder('post')
       .leftJoinAndSelect('post.themes', 'theme')
@@ -73,10 +61,13 @@ export class PostService {
         return theme.id;
       }),
     };
-  }
+  }*/
   //find solution for update AND later : post
   async update(id: number, data: UpdatePostDto): Promise<PostEntity> {
-    let post = await this.findOne(id);
+    let post = await this.find(id);
+    if (data.themes) {
+      post.themes = data.themes;
+    }
     post = this.postRepository.merge(post, data);
     return this.postRepository.save(post);
   }

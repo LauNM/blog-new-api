@@ -1,4 +1,4 @@
-GET http://localhost:3000/theme?search=12
+GET http://localhost:3000/post/22
 Accept: application/json
 Content-Type: application/json
 
@@ -8,22 +8,24 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "title": "Quatrième article",
-  "summary": "Encore un autre texte pour résumer ce faux article",
-  "content": "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+  "title": "hellollllll",
+  "summary": "Encorej un autre texte pour résumer ce faux article",
+  "content": "bla blla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
   "author": "Laurie",
-  "themes": [13, 14]
+  "themes": [
+    {
+      "id": 12
+    }
+  ]
 }
 
 ###
-PATCH http://localhost:3000/post/5
+PATCH http://localhost:3000/post/22
 Accept: application/json
 Content-Type: application/json
 
 {
-  "themes": [{
-    "id": 7
-  }]
+  "title": "yooooo"
 }
 
 ###
@@ -32,5 +34,9 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "title": "Thème 3"
+  "title": "Thème à supprimer"
 }
+
+###
+DELETE http://localhost:3000/post/11
+
