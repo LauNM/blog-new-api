@@ -1,3 +1,73 @@
+PATCH http://localhost:3000/theme/33
+Accept: application/json
+Content-Type: application/json
+Content-Length: 23
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "yooooo"
+}
+
+<> 2023-04-30T153642.404.json
+
+###
+
+PATCH http://localhost:3000/theme/33
+Accept: application/json
+Content-Type: application/json
+Content-Length: 23
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "yooooo"
+}
+
+<> 2023-04-30T153624.500.json
+
+###
+
+PATCH http://localhost:3000/theme/33
+Accept: application/json
+Content-Type: application/json
+Content-Length: 23
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "yooooo"
+}
+
+<> 2023-04-30T153600.404.json
+
+###
+
+GET http://localhost:3000/theme
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-30T153534.200.json
+
+###
+
+GET http://localhost:3000/theme
+Accept: application/json
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-30T153530.200.json
+
+###
+
 DELETE http://localhost:3000/theme/27
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
@@ -699,64 +769,6 @@ User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 <> 2023-04-25T203052.200.json
-
-###
-
-GET http://localhost:3000/post
-Accept: application/json
-Content-Type: application/json
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-25T203035.200.json
-
-###
-
-PATCH http://localhost:3000/post/11
-Accept: application/json
-Content-Type: application/json
-Content-Length: 38
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "title": "modification du titre"
-}
-
-<> 2023-04-25T203023.200.json
-
-###
-
-GET http://localhost:3000/post
-Accept: application/json
-Content-Type: application/json
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-25T202953.200.json
-
-###
-
-DELETE http://localhost:3000/theme/14
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-24T220427.500.json
-
-###
-
-DELETE http://localhost:3000/theme/14
-Accept: application/json
-Content-Type: application/json
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-24T220411.500.json
 
 ###
 

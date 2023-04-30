@@ -38,7 +38,11 @@ export class ThemeController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: number, @Body() data: UpdateThemeDto) {
+  async update(@Param('id') id: number, @Body() data: UpdateThemeDto) {
+    const theme = await this.themeService.find(id);
+    if (!theme) {
+      throw new NotFoundException();
+    }
     return this.themeService.update(id, data);
   }
 
@@ -46,7 +50,7 @@ export class ThemeController {
   async remove(@Param('id') id: number) {
     const theme = await this.themeService.find(id);
     if (!theme) {
-      throw new NotFoundException('This theme does not exist');
+      throw new NotFoundException();
     }
     const posts = await this.postService.findAll(id, null);
     if (posts.length > 0) {

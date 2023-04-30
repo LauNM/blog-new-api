@@ -43,5 +43,14 @@ Content-Type: application/json
 }
 
 ###
+PATCH http://localhost:3000/theme/33
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "yooooo"
+}
+
+###
 DELETE http://localhost:3000/theme/27
 
